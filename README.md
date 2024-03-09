@@ -10,7 +10,6 @@ Full description of GNBG can be found in "D. Yazdani, M. N. Omidvar, D. Yazdani,
 
 The code is structured to work with pre-saved parameter settings for 24 distinct GNBG-generated problem instances (f1 to f24).
 
-Differential Evolution (DE) serves as an example optimizer to illustrate the application of these problem instances in optimization scenarios.
 
 ***Important Note:***
 
