@@ -153,7 +153,7 @@ for i in range(0,Dimension):
 # Run the optimizer where the fitness function is gnbg.fitness    
 
 popsize = 15  # population size for DE
-maxiter = MaxEvals // (popsize * Dimension) # number of generations/iterations for DE
+maxiter = MaxEvals // popsize # number of generations/iterations for DE
 
 results = differential_evolution(gnbg.fitness, bounds=bounds, disp=True, polish=False, popsize=popsize, maxiter=maxiter)
 
