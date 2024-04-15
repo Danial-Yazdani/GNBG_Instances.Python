@@ -151,8 +151,11 @@ for i in range(0,Dimension):
     bounds.append(tuple((lb[i],ub[i])))
 
 # Run the optimizer where the fitness function is gnbg.fitness    
-results = differential_evolution(gnbg.fitness,bounds = bounds,disp=True,polish=False)
 
+popsize = 15  # population size for DE
+maxiter = MaxEvals // (popsize * Dimension) # number of generations/iterations for DE
+
+results = differential_evolution(gnbg.fitness, bounds=bounds, disp=True, polish=False, popsize=popsize, maxiter=maxiter)
 
 # If you use your own algorithm (not from a library), you can use result = gnbg.fitness(X) to calculate the fitness values of multiple solutions stored in a matrix X.
 # The function returns the fitness values of the solutions in the same order as they are stored in the matrix X.
